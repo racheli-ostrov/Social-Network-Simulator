@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5eeee90;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #4f4f4f; /* קו שחור דק מתחת ל-navbar */
+  position: sticky;
+}
+
+.navbar-links {
+  display: flex; /* יישום Flexbox */
+  align-items: center;
+  width: 100%; /* דואג שהלינקים יתפשטו על כל הרוחב */
+}
+
+.navbar a, .logout-btn {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+                    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+                   linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px; /* הגדרת רוחב קבוע לכפתור */
+  height: 74px; /* הגדרת גובה קבוע לכפתור */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.navbar a:hover, .logout-btn:hover {
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #115cff7e, #115cff71,#c716ca77, #ff269272,#ff262d79, #ff550077, #ffff0080);
+  border-color: rgb(255, 255, 255);
+}
+
+.title {
+  font-size: 10px;
+}
+
+.infoNavBar{
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+                    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+                   linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* הגדרת רוחב קבוע לכפתור */
+  height: 80px; /* הגדרת גובה קבוע לכפתור */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.logout-btn {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+                    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+                   linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px; /* הגדרת רוחב קבוע לכפתור */
+  height: 80px; /* הגדרת גובה קבוע לכפתור */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  /* margin-left: 200px; */
+}

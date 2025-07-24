@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.photosContainer{
+  z-index: 1;
+  display: flex; /* Use flexbox for layout */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between posts */
+    margin-top: 6%;
+}
+.loadPhotoes{
+  display: flex;
+  justify-content: center;
+  /* יישור תוכן פנימי לשמאל */
+  align-items: center;
+  text-align: center;
+  /* טקסט בתוך המשימה מיושר לימין */
+  /* position: relative; */
+  width: 200px;
+  /* קביעת רוחב המשימה */
+  height: 35px;
+  /* border-radius: 10px; */
+  /* min-height: 120px; */
+  margin-left: 665px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(245deg, #115cff,#115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+}
+
+h4{
+  align-items: center;
+  text-align: center;
+}
+
+.photosButton{
+  display: flex;
+  justify-content: center;
+  /* יישור תוכן פנימי לשמאל */
+  align-items: center;
+  text-align: center;
+  /* טקסט בתוך המשימה מיושר לימין */
+  /* position: relative; */
+  width: 59px;
+  /* קביעת רוחב המשימה */
+  height: 55px;
+  /* margin-right: 2px; */
+  border-radius: 25%;  /* min-height: 120px; */
+  /* margin-left: 735px; */
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  /* margin-right: 5px; */
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(245deg, #115cff,#115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  margin-left: 6px;
+  margin-top: -75px;
+}
+
+.photosButton:hover{
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe,#f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}
+
+.photosBackButton {
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  margin-right: 2px;
+  margin-left: 5px;
+  margin-top: -150px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0px solid transparent; /* גבול שקוף ברירת מחדל */
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(245deg, #115cff, #115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  transition: all 0.3s ease-in-out; /* אנימציה חלקה */
+}
+
+.photosBackButton:hover {
+  background-color: #fff; /* רקע לבן */
+  color: #000; /* כיתוב שחור */
+  border: 0px solid #fff; /* גבול לבן */
+  background-image: none; /* הסרת הרקע הצבעוני */
+}

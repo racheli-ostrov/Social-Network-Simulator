@@ -1,0 +1,190 @@
+/* Post.module.css */
+
+.postContainer {
+  position: relative;
+  box-shadow: rgba(174, 165, 165, 0.3) 0px 30px 60px -30px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 20%;
+  font-size: 12px;
+  height: auto;
+}
+
+
+h1 {
+  border-bottom: 2px solid #000;
+}
+
+.postContainer:hover {
+  transform: scale(1.05);
+}
+
+.postContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.postHeader {
+  margin-bottom: 8px;
+}
+
+.postActions {
+  display: flex;
+  gap: 8px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.postActions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 40px;
+  border: none;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(210deg, #115cff,#115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+}
+
+.pop {
+  font-size: 12px;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(255, 250, 250);
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 30%;
+  /* color: #823636; */
+  max-height: 92vh;
+  margin-top: -170px;
+}
+
+.button:hover {
+  background: #F6F9FE;
+  color: #5e92e6;
+}
+
+.button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+  /* border: 2px solid #4285f4; */
+}
+
+.button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+/* CommentSection.module.css */
+
+.commentsSection {
+  max-height: 250px;
+  /* Set your desired height here */
+  overflow-y: auto;
+  /* border: 1px solid #ddd; */
+  /* Optional: Add a border for clarity */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.toggleCommentsButton {
+  background-color: #f0f0f0;
+  /* border: 3px solid #3c4043; הוספת מסגרת בעובי 3 פיקסלים */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #3c4043;
+}
+
+.addComment {
+  margin-top: 20px;
+  display: flex;
+}
+
+.commentInput {
+  /* width: calc(100% - 90px); */
+  /* Adjust width based on your layout */
+  /* padding: 8px; */
+  height: 40px;
+  width: 90%;
+  padding: 5px;
+  border-radius: 5px;
+  /* border: 1px solid #ddd; */
+  resize: none;
+  /*margin-right: 10px;
+  border: none; */
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+border-color: #33333342; */
+}
+
+.commentInput:focus {
+  border: 0.2px black;
+}
+
+.plus {
+  width: 50px;
+  height: 50px;
+}
+
+.pButton { 
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+.pButton:hover {
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe,#f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}

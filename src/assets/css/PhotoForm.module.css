@@ -1,0 +1,120 @@
+.form {
+  text-align: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgb(255, 250, 250);
+  border-radius: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 30%;
+  margin-left: 36%;
+  margin-top: -130px;
+  border: 1px solid black;
+  /* צבע בהיר לדקיקות המסגרת */
+  /* background-image: linear-gradient(#fff, #fff),
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box; */
+  transition: all 0.3s ease-in-out;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+}
+
+.input {
+  width: 90%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342;
+}
+
+.x {
+  font-size: 10px;
+  width: fit-content;
+  padding: 10px;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+}
+
+.x:hover {
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe,#f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}
+
+.inputButton {
+  display: flex;
+  justify-content: center;
+  /* יישור תוכן פנימי לשמאל */
+  align-items: center;
+  text-align: right;
+  /* טקסט בתוך המשימה מיושר לימין */
+  position: relative;
+  width: 40px;
+  /* קביעת רוחב המשימה */
+  height: 40px;
+  margin-right: 2px;
+  border-radius: 25%;  /* min-height: 120px; */
+  margin-right: 0;
+  /* יישור קונטיינר לימין */
+  margin-left: auto;
+  /* רווח אוטומטי משמאל */
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(210deg, #115cff,#115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  margin-right: 5px;
+  margin-top: 6px;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+}
+.inputButton:hover{
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe,#f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}
+
+
+.inputsButton {
+  display: flex;
+  justify-content: center;
+  /* יישור תוכן פנימי לשמאל */
+  align-items: center;
+  text-align: center;
+  /* טקסט בתוך המשימה מיושר לימין */
+  /* position: relative; */
+  width: 40px;
+  /* קביעת רוחב המשימה */
+  height: 40px;
+  /* min-height: 120px; */
+  margin-left: 206px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(105deg, #115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+}
+
+.inputsButton:hover{
+  background-color: transparent; /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe,#f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}

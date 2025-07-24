@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.button {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+  vertical-align: baseline;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.input {
+  width: 170px;
+  margin-left: 2%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342;
+}
+
+.albumsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  /* אחיד רווחים בין האלבומים */
+  flex-wrap: wrap;
+  gap: 1px;
+  /* רווח קטן בין האלבומים */
+
+}
+
+.albumsActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: baseline;
+  margin-bottom: 10px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  border-color: black;
+}
+
+.add {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.album {
+  position: relative;
+  width: 210px;
+  height: 220px;
+  border-radius: 8px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border: 3px solid transparent; /* יכול להגדיר גבול כאן אם צריך */
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.album:hover {
+  transform: scale(1.05);
+}
+
+
+.album:hover {
+  transform: scale(1.05);
+  /* border-color: rgb(255, 255, 255); */
+}
+
+.album .actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.album .actions .button {
+  background-color: #ff5500;
+  /* רקע צבעוני */
+  color: white;
+  width: 30px;
+  height: 30px;
+  margin-right: 2px;
+  border-radius: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* 
+.album .actions .button:hover {
+  border-color: rgb(255, 255, 255);
+} */
+
+.album .options {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.album.show-options .options {
+  display: flex;
+  /* מציג את אפשרויות העריכה כאשר הכפתור נלחץ */
+}
+
+.album .options input,
+.album .options button {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.album .options input {
+  font-size: 14px;
+}
+
+.album .options button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* .album .options button:hover {
+  border-color: rgb(255, 255, 255);
+} */
+
+
+.albumsButton {
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(105deg, #115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.editAlbumsButton {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.editAlbumsButton:hover {
+  background-color: transparent;
+  /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe, #f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}
+
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  /* מציב את שדה הקלט בשורה אחת */
+  gap: 10px;
+  /* רווח בין שדה הקלט לכפתורים */
+}
+
+.editContainer .actions {
+  display: flex;
+  /* מציב את הכפתורים בשורה אחת */
+  gap: 10px;
+  /* רווח בין הכפתורים */
+  justify-content: flex-start;
+  /* השמה של הכפתורים מתחילת השורה */
+}
+
+.inputEdit {
+  width: 350px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342;
+}
+
+.addButton {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.addButton:hover {
+  background-color: transparent;
+  /* רקע שקוף */
+  /* color: #fff; */
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #ecf1fa, #ecf1fa, #ecf1fa, #ecf1fa);
+  border-color: rgb(255, 255, 255);
+  color: #333;
+}
+
+
+.add {
+  /* width: 25%; */
+  display: flex;
+  align-items: center;
+  /* מיישר את התוכן במרכז אנכית */
+  justify-content: space-between;
+  margin-right: 2px;
+  border-radius: 25%;
+}
+
+.add .input {
+  width: 170px;
+  height: 40px;
+  /* גובה אחיד לשדה המילוי */
+  margin-left: 2%;
+}
+
+.add .button {
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(105deg, #115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 0;
+  /* אין צורך ב-padding כדי להתאים גובה */
+  width: 40px;
+  /* גודל קבוע לכפתורים */
+  height: 40px;
+  /* גובה תואם לשדה המילוי */
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+  /* מיישר את התוכן למרכז אנכית */
+  justify-content: flex-start;
+  /* מוודא שהתוכן מתחיל מתחילת השורה */
+  margin-bottom: 10px;
+  align-items: center;
+  /* רווח מתחת לשורה */
+}
+
+.search .button {
+  align-self: center;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  margin-right: 2px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.search .button:hover {
+  background-color: transparent;
+  /* רקע שקוף */
+  color: #fff;
+  /* background-image: linear-gradient(45deg, #9000927d, #da1fdd82, #ff252582, #ff814b82); */
+  background-image: linear-gradient(150deg, #f7f9fe, #f7f9fe, #f7f9fe, #f7f9fe);
+  border-color: rgb(255, 255, 255);
+}

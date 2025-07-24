@@ -1,0 +1,142 @@
+/* Posts.module.css */
+
+.postsContainer {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
+  gap: 20px;
+  /* Space between posts */
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.input {
+  margin-top: 20px;
+  width: 200px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342;
+}
+
+.button:hover {
+  background: #F6F9FE;
+  /* color: #174ea6; */
+}
+
+.button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Add other styles as needed */
+}
+
+.button {
+  /* Your button styles */
+  margin-right: 10px;
+  /* Adjust spacing between buttons */
+  width: 40px;
+  height: 40px;
+}
+
+.input {
+  /* Your input styles */
+  flex-grow: 1;
+  /* Allow the input to grow and take available space */
+  margin-right: 10px;
+  /* Adjust spacing between input and buttons */
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342;
+}
+
+.Viewbutton{
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  padding: 0;
+  margin: 0 -1000px;
+  border: 3px solid transparent;
+  /* border-radius: 50px; */
+  background-image: linear-gradient(#fff, #fff), 
+                    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+                    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 96.3%; */
+  /* height: 100%; */
+  margin-right: 2px;
+  height: 40px;
+  /* border-radius: 20%; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+.Viewbutton:hover {
+  color: #fff;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.viewButton{
+  width: 150px;
+  margin-left: -1050px;
+  height: 40px;
+}
+
+.searchButton{
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  /* /* margin-right: 250px; */
+  margin-left: 180px;
+}
+
+.searchButton:hover , .searchButton:hover , .viewButton:hover {
+  color: #000000;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+  background-image: none;
+}

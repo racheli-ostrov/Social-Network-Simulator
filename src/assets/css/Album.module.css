@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.albumContainer{
+  /* display: flex; */
+  font-family: 'Montserrat', sans-serif;
+  justify-content: flex-start; /* יישור תוכן פנימי לשמאל */
+  align-items: center;
+  text-align: center; /* טקסט בתוך המשימה מיושר לימין */
+  position: relative;
+  width: 33%; /* קביעת רוחב המשימה */
+  /* min-height: 120px; */
+  margin-right: 0; /* יישור קונטיינר לימין */
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  /* background-image: linear-gradient(#fff, #fff),
+      linear-gradient(105deg, #0b24ff91, #006eff91); */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px; */
+  width: 200px;
+  }

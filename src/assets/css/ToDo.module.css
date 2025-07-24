@@ -1,0 +1,471 @@
+.toDosWrapper {
+  display: flex;
+  flex-direction: column;
+  /* משימות אחת מתחת לשנייה */
+  align-items: flex-start;
+  /* יישור לתחילת השורה */
+  width: 100%;
+  gap: 16px;
+  /* רווח בין המשימות */
+  margin-top: 0;
+  /* התחל מלמעלה */
+}
+
+.toDosContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: right;
+  position: relative;
+  width: 35%;
+  min-height: 120px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(105deg, #115cff, #ff2692, #ff0000, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 3px;
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+}
+
+/* חוקים עבור משימות */
+.toDosContainer:nth-child(1) {
+  margin-top: -220px;
+}
+
+.toDosContainer:nth-child(2) {
+  margin-top: 0px;
+  /* 100 יותר מהראשונה */
+}
+
+.toDosContainer:nth-child(3) {
+  margin-top: 20px;
+  /* 100 יותר מהשנייה */
+}
+
+.toDosContainer:nth-child(4) {
+  margin-top: 30px;
+  /* 100 יותר מהשלישית */
+}
+
+.toDosContainer:nth-child(5) {
+  margin-top: 35px;
+  /* 100 יותר מהרביעית */
+}
+
+/* כל משימה נוספת */
+.toDosContainer:nth-child(n+6) {
+  margin-top: calc(-220px + (100px * (n - 1)));
+  /* רק אם הדפדפן תומך בחישובים דינמיים */
+}
+
+
+.toDosContainer:hover {
+  transform: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 20px 30px 0, rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.toDosContainer:focus {
+  outline: none;
+}
+
+.todoContent {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "id . ."
+    "text buttons buttons";
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  text-align: right;
+  /* טקסט בתוכן המשימה מיושר לימין */
+  z-index: 1000;
+  /* margin-top: -1000px; */
+}
+
+.todoId {
+  grid-area: id;
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.todoText {
+  grid-area: text;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  text-align: right;
+  /* יישור טקסט לימין */
+}
+
+.todoButtons {
+  grid-area: buttons;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.todoButton {
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  /* מילוי לבן */
+  padding: 0;
+  margin: 0 10px;
+  border: 3px solid transparent;
+  /* גבול שקוף */
+  background-image: linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  /* הגדרת מקור הגרדיאנט למסגרת */
+  background-clip: padding-box;
+  /* הגדרת האזורים בהם הגרדיאנט יוצג */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+}
+
+
+.todoContent button {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 6px; */
+  /* border: none; */
+  /* background: none; */
+  cursor: pointer;
+  margin-right: 2px;
+  border-radius: 25%;
+  transition: background-color 0.2s ease;
+  background-image: linear-gradient(#fff, #fff),
+    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.todoContent button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: none;
+}
+
+.todoContent button svg,
+.todoContent button img {
+  width: 24px;
+  height: 24px;
+}
+
+input {
+  width: 1500px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+.editContainer {
+  bottom: 10px; /* הצבה למטה */
+margin-bottom: 5px;
+}
+
+
+.editContainer label {
+  margin-bottom: 5px;
+}
+
+.input {
+  padding: 5px;
+  margin-bottom: 10px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+.edit {
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  /* width: 60px;
+  height: 48px; */
+  margin: 0px;
+}
+
+.edit:hover {
+  color: #333;
+}
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+}
+
+.input {
+  margin-top: 20px;
+  width: 20px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+.button:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  margin-right: 10px;
+  /* Adjust spacing between buttons */
+}
+
+input {
+  width: 100%;  /* גודל מלא בתוך הקונטיינר */
+  max-width: 500px; /* מקסימום גודל רחב אם תרצה להגביל את הגודל */
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+
+.add {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin-left: 5px;
+  /* Adjust spacing between buttons */
+}
+
+/* 
+.addActions {
+  display: flex;
+} */
+
+.filter {
+  /* text-align: center; */
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.filter label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.filter select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.todoButtonCancel {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 6px; */
+  /* border: none; */
+  /* background: none; */
+  cursor: pointer;
+  margin-right: 2px;
+  border-radius: 25%;
+  transition: background-color 0.2s ease;
+  background-image: linear-gradient(#fff, #fff),
+    /* linear-gradient(45deg, #900092, #da1fdd, #ff2525, #ff814b); */
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.todoButtonCancel:hover {
+  background-color: #cc0000;
+}
+
+.edititlebtn{
+  margin-top: 0px;
+}
+
+.editContainer {
+  bottom: 10px;
+  margin-bottom: 5px;
+  width: 100%; /* תופס את כל הרוחב של ההורה */
+}
+
+.editContainer label {
+  margin-bottom: 5px;
+  display: block; /* כל תווית בשורה חדשה */
+  width: 100%; /* תופס את כל הרוחב */
+}
+
+.input {
+  width: 100%; /* תופס את כל הרוחב של ההורה */
+  max-width: 100%; /* מגביל את הרוחב המקסימלי */
+  box-sizing: border-box; /* כולל padding ו-border ברוחב הכולל */
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+/* מבטל את ההגדרה הקודמת שמגבילה את הרוחב */
+/* input {
+  width: auto;
+} */
+
+.edititlebtn {
+  margin-top: 0px;
+  width: 100%; /* תופס את כל הרוחב */
+}
+
+
+
+.editContainer {
+  bottom: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.editContainer label {
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0 2px 6px 0, rgba(60, 64, 67, 0.15) 0 8px 12px 5px;
+  border-color: #33333342; */
+}
+
+.todoActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin-top: -5px; */
+}
+
+.todoButton, .todoButtonCancel {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 25%;
+  transition: background-color 0.2s ease;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 0 4px; /* רווח אחיד בין הכפתורים */
+}
+
+.todoButtonCancel {
+  margin-top: 0; /* מבטל את ה-margin-top הקודם */
+}
+
+.edit {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 4px;
+  border-radius: 25%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(45deg, #115cff, #115cff, #ff2692, #ff5500, #ffff00);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* אם צריך להוסיף קונטיינר נוסף לכפתורי העריכה */
+.editButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
